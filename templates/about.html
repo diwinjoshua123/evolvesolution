@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - Evolve Solution{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header"
+    style="background-color: var(--primary-color); color: white; text-align: center; padding: 4rem 5%;">
+    <div class="container">
+        <h1>About Evolve Solution</h1>
+        <p style="color: #cbd5e1; max-width: 600px; margin: 1rem auto;">Redefining possibilities through innovation and
+            technology.</p>
+    </div>
+</section>
+
+<!-- Company Overview -->
+<section class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="section-tag">OUR STORY</div>
+            <h2>We Engineer Digital Evolution</h2>
+            <p>Evolve Solution was born from a passion for innovation and a commitment to excellence. We are a team of
+                visionaries, engineers, and strategists dedicated to empowering businesses to navigate the complexities
+                of the digital age.</p>
+            <p>We believe that technology should be an enabler, not a barrier. That's why we focus on creating
+                user-centric, scalable, and intelligent solutions that drive real business results. From startups to
+                enterprises, we partner with organizations to build the future.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="mission-vision" style="background-color: var(--accent-color);">
+    <div class="container">
+        <div class="expertise-grid">
+            <div class="expertise-card" style="text-align: center;">
+                <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Our Mission</h3>
+                <p>To accelerate global digital transformation by delivering scalable, intelligent, and user-centric
+                    technology solutions that solve real-world problems.</p>
+            </div>
+            <div class="expertise-card" style="text-align: center;">
+                <div class="card-icon"><i class="fas fa-eye"></i></div>
+                <h3>Our Vision</h3>
+                <p>To be the world's most trusted partner in technological innovation, fostering a future where digital
+                    potential is limitless and accessible to all.</p>
+            </div>
+            <div class="expertise-card" style="text-align: center;">
+                <div class="card-icon"><i class="fas fa-gem"></i></div>
+                <h3>Our Values</h3>
+                <p><strong>Integrity, Excellence, Innovation.</strong> We believe in transparent partnerships,
+                    continuous learning, and a relentless pursuit of perfection.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team / Culture -->
+<section class="culture">
+    <div class="container" style="text-align: center;">
+        <h2>Our Culture</h2>
+        <p class="section-subtitle">Collaborative. Innovative. Inclusive.</p>
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <img src="{{ url_for('static', filename='images/culture-1.jpg') }}" alt="Team Culture 1"
+                style="border-radius: 12px; height: 300px; width: 100%; object-fit: cover; box-shadow: var(--shadow-md);">
+            <img src="{{ url_for('static', filename='images/culture-2.jpg') }}" alt="Team Culture 2"
+                style="border-radius: 12px; height: 300px; width: 100%; object-fit: cover; box-shadow: var(--shadow-md);">
+            <img src="{{ url_for('static', filename='images/culture-3.jpg') }}" alt="Team Culture 3"
+                style="border-radius: 12px; height: 300px; width: 100%; object-fit: cover; box-shadow: var(--shadow-md);">
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Join Our Team</h2>
+        <p>Are you passionate about technology and innovation? We are always looking for talented individuals to join
+            us.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary" style="margin-top: 2rem;">Contact Us</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Evolve Solution | IT Services & Consulting{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Evolve Solution Logo"
+                        class="logo-img">
+                    <div class="logo-text">
+                        <span class="text-evolve">Evolve</span><span class="text-solution">Solution</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                {% if current_user.is_authenticated %}
+                <li><a href="{{ url_for('logout') }}" style="color: var(--primary-color); font-weight: 600;">Logout</a>
+                </li>
+                {% else %}
+                <li><a href="{{ url_for('login') }}" style="color: var(--primary-color); font-weight: 600;">Login</a>
+                </li>
+                {% endif %}
+                <li><a href="{{ url_for('contact') }}" class="btn-nav-cta">Get a Quote</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Evolve Solution</h3>
+                <p>Empowering businesses through digital innovation. We engineer scalable digital platforms and
+                    high-performance applications.</p>
+                <div class="social-links">
+                    <!-- Add social icons here if needed -->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="{{ url_for('services') }}">Web Development</a></li>
+                    <li><a href="{{ url_for('services') }}">Cloud Solutions</a></li>
+                    <li><a href="{{ url_for('services') }}">Digital Marketing</a></li>
+                    <li><a href="{{ url_for('services') }}">IT Consulting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-envelope margin-right-sm"></i> evolvesolutionspvtltd@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt margin-right-sm"></i> NP 28, Sai Supreme, Thiru Vi Ka Industrial
+                    Estate, Chennai – 600006</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Evolve Solution. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
