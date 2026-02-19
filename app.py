@@ -25,10 +25,11 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 @app.route('/')
+@app.route('/index.html')
 def home():
     return render_template('index.html')
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login.html', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         email = request.form.get('email')
@@ -43,7 +44,7 @@ def login():
             
     return render_template('login.html')
 
-@app.route('/register', methods=['POST'])
+@app.route('/register.html', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form.get('username')
@@ -61,47 +62,47 @@ def register():
         
         login_user(new_user)
         return redirect(url_for('home'))
-    return redirect(url_for('login'))
+    return render_template('login.html') # Reusing login template or create register.html if needed
 
-@app.route('/logout')
+@app.route('/logout.html')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('home'))
 
-@app.route('/services')
+@app.route('/services.html')
 def services():
     return render_template('services.html')
 
-@app.route('/services/custom-software')
+@app.route('/custom-software.html')
 def custom_software():
     return render_template('custom_software.html')
 
-@app.route('/services/digital-marketing')
+@app.route('/digital-marketing.html')
 def digital_marketing():
     return render_template('digital_marketing.html')
 
-@app.route('/services/it-consulting')
+@app.route('/it-consulting.html')
 def it_consulting():
     return render_template('it_consulting.html')
 
-@app.route('/services/professional-training')
+@app.route('/professional-training.html')
 def professional_training():
     return render_template('professional_training.html')
 
-@app.route('/services/cloud-solutions')
+@app.route('/cloud-solutions.html')
 def cloud_solutions():
     return render_template('cloud_solutions.html')
 
-@app.route('/services/ai-automation')
+@app.route('/ai-automation.html')
 def ai_automation():
     return render_template('ai_automation.html')
 
-@app.route('/contact')
+@app.route('/contact.html')
 def contact():
     return render_template('contact.html')
 
-@app.route('/about')
+@app.route('/about.html')
 def about():
     return render_template('about.html')
 

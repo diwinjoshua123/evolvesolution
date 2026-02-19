@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Evolve Solution</title>
+    <title>Home - Evolve Solution | Leading IT Services</title>
     <link rel="stylesheet" href="static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -14,9 +16,8 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <div class="logo-icon">
-                        <span class="logo-e">e</span><span class="logo-v">v</span>
-                    </div>
+                    <img src="static/images/logo.png" alt="Evolve Solution Logo"
+                        class="logo-img">
                     <div class="logo-text">
                         <span class="text-evolve">Evolve</span><span class="text-solution">Solution</span>
                     </div>
@@ -24,8 +25,13 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                
+                <li><a href="login.html" style="color: var(--primary-color); font-weight: 600;">Login</a>
+                </li>
+                
+                <li><a href="contact.html" class="btn-nav-cta">Get a Quote</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -36,148 +42,177 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to EvolveSolution</h1>
-                <p>Evolve Solution is a technology-driven company specializing in web and mobile application
-                    development, digital marketing, IT consulting, and professional training services. We engineer
-                    scalable digital platforms, cloud-ready systems, and high-performance applications using modern
-                    frameworks, microservice architectures, and agile methodologies.</p>
-                <a href="services.html" class="btn btn-primary">Our Services</a>
-            </div>
-        </section>
+        
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Transform Your Business with Intelligent Digital Solutions</h1>
+        <p>We engineer scalable digital platforms, cloud-native systems, and high-performance applications to drive your
+            business growth.</p>
+        <div class="hero-btns">
+            <a href="services.html" class="btn btn-primary">Explore Services</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+    </div>
+</section>
 
-        <section class="about">
-            <div class="container">
-                <div class="about-content">
-                    <h2>About Evolve</h2>
-                    <p>At EvolveSolution, we believe in blending innovation and intelligence to build digital solutions
-                        that
-                        make a real impact. Our team of developers, designers, and strategists are dedicated to
-                        transforming
-                        ideas into powerful and user-friendly applications. We specialize in Software Development,
-                        AI-Driven
-                        Solutions, and Startup-Ready Platforms.</p>
-                </div>
-                <div class="about-image">
-                    <img src="static/about_office_team.png" alt="Evolve Solution Team">
-                </div>
-            </div>
-        </section>
+<!-- About Teaser -->
+<section class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="section-tag">WHO WE ARE</div>
+            <h2>Innovation Meets Intelligence</h2>
+            <p>At Evolve Solution, we blend technical expertise with business intelligence to create digital solutions
+                that make a real impact. Whether you are a startup looking for a launchpad or an enterprise seeking
+                digital transformation, we are your strategic partner.</p>
+            <p>Our team of developers, designers, and strategists is dedicated to transforming complex challenges into
+                elegant, user-friendly solutions.</p>
+            <a href="about.html" class="link-arrow">Read More About Us <i
+                    class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Team collaborating">
+        </div>
+    </div>
+</section>
 
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="container">
-                <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Projects Delivered</p>
-                </div>
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p>Years Experience</p>
-                </div>
-                <div class="stat-item">
-                    <h3>100%</h3>
-                    <p>Client Satisfaction</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>Support System</p>
-                </div>
+<!-- Expertise / Services -->
+<section class="expertise">
+    <div class="container">
+        <h2>Our Core Expertise</h2>
+        <p class="section-subtitle">Comprehensive IT services tailored to your business needs.</p>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Custom Software</h3>
+                <p>Tailored Web & Mobile applications built with modern frameworks to meet your unique business
+                    challenges.</p>
+                <a href="services.html" class="link-arrow">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
-        </section>
+            <div class="expertise-card">
+                <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Digital Transformation</h3>
+                <p>Modernize your operations with cutting-edge digital strategies and process automation.</p>
+                <a href="services.html" class="link-arrow">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="expertise-card">
+                <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud Infrastructure</h3>
+                <p>Scalable, secure, and cost-effective cloud solutions on AWS, Azure, and Google Cloud.</p>
+                <a href="services.html" class="link-arrow">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="expertise-card">
+                <div class="card-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI & Data Analytics</h3>
+                <p>Leverage machine learning and data analytics to unlock actionable insights and automate
+                    decision-making.</p>
+                <a href="services.html" class="link-arrow">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- Expertise Section -->
-        <section class="expertise">
-            <div class="container">
-                <h2>Our Expertise</h2>
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <img src="static/it_development.png" alt="IT Development">
-                        <h3>Custom IT Solutions</h3>
-                        <p>Tailored software to meet your unique business challenges.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="card-icon">🚀</div>
-                        <h3>Digital Transformation</h3>
-                        <p>Modernize your operations with cutting-edge digital strategies.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="card-icon">☁️</div>
-                        <h3>Cloud Infrastructure</h3>
-                        <p>Scalable and secure cloud solutions for enterprise growth.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="card-icon">🤖</div>
-                        <h3>AI & Automation</h3>
-                        <p>Leverage machine learning to automate and optimize workflows.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- Stats Section -->
+<section class="stats">
+    <div class="container">
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p>Projects Delivered</p>
+        </div>
+        <div class="stat-item">
+            <h3>10+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Client Satisfaction</p>
+        </div>
+        <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Support System</p>
+        </div>
+    </div>
+</section>
 
-        <!-- Careers Teaser -->
-        <section class="careers-teaser">
-            <div class="container">
-                <div class="careers-content">
-                    <h2>Grow Your Career with Us</h2>
-                    <p>Join our dynamic team or enroll in our professional training programs. We offer placement support
-                        and internship opportunities to kickstart your journey in tech.</p>
-                    <a href="contact.html" class="btn btn-secondary">Explore Opportunities</a>
-                </div>
-                <div class="careers-image">
-                    <img src="static/career_growth.png" alt="Career Growth">
-                </div>
+<!-- Why Choose Us -->
+<section class="highlights">
+    <div class="container">
+        <h2>Why Partner with Evolve?</h2>
+        <p class="section-subtitle">We deliver excellence at every stage of the project lifecycle.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Innovative Approach</h3>
+                <p>We stay ahead of the curve, utilizing the latest technologies to solve complex business problems.</p>
             </div>
-        </section>
+            <div class="feature-card">
+                <div class="card-icon"><i class="fas fa-users-cog"></i></div>
+                <h3>Expert Team</h3>
+                <p>Our skilled professionals bring years of cross-domain experience to ensure your project's success.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Client-Centric</h3>
+                <p>We work collaboratively with you, ensuring our solutions align perfectly with your business goals.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <section class="highlights">
-            <div class="container">
-                <h2>Why Choose Us</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Innovation</h3>
-                        <p>We stay ahead of the curve, leveraging the latest technologies to solve complex problems.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Expertise</h3>
-                        <p>Our team of skilled professionals brings years of experience across various domains.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Customer Focus</h3>
-                        <p>Your success is our priority. We work closely with you to understand and meet your unique
-                            needs.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's discuss how we can help your business grow with technology.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Get in Touch</a>
+    </div>
+</section>
+
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Evolve Solution</h3>
-                <p>Empowering businesses through digital innovation.</p>
+                <p>Empowering businesses through digital innovation. We engineer scalable digital platforms and
+                    high-performance applications.</p>
+                <div class="social-links">
+                    <!-- Add social icons here if needed -->
+                </div>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: evolvesolutionspvtltd@gmail.com</p>
-                <p>Location: NP 28, Sai Supreme, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Ekkatuthangal,
-                    Chennai, Tamil Nadu – 600006</p>
-            </div>
-            <div class="footer-section">
-                <h4>Links</h4>
+                <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Web Development</a></li>
+                    <li><a href="services.html">Cloud Solutions</a></li>
+                    <li><a href="services.html">Digital Marketing</a></li>
+                    <li><a href="services.html">IT Consulting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-envelope margin-right-sm"></i> evolvesolutionspvtltd@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt margin-right-sm"></i> NP 28, Sai Supreme, Thiru Vi Ka Industrial
+                    Estate, Chennai – 600006</p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Evolve Solution. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="static/script.js"></script>
 </body>
 

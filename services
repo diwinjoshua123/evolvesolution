@@ -25,13 +25,13 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="services">Services</a></li>
                 
-                <li><a href="login.html" style="color: var(--primary-color); font-weight: 600;">Login</a>
+                <li><a href="login" style="color: var(--primary-color); font-weight: 600;">Login</a>
                 </li>
                 
-                <li><a href="contact.html" class="btn-nav-cta">Get a Quote</a></li>
+                <li><a href="contact" class="btn-nav-cta">Get a Quote</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -55,7 +55,7 @@
 <section class="services-list">
     <div class="container">
         <div class="expertise-grid">
-            <a href="custom-software.html" class="expertise-card-link"
+            <a href="services/custom-software" class="expertise-card-link"
                 style="text-decoration: none; color: inherit; display: block;">
                 <div class="expertise-card">
                     <div class="card-icon"><i class="fas fa-code"></i></div>
@@ -71,7 +71,7 @@
                 </div>
             </a>
 
-            <a href="digital-marketing.html" class="expertise-card-link"
+            <a href="services/digital-marketing" class="expertise-card-link"
                 style="text-decoration: none; color: inherit; display: block;">
                 <div class="expertise-card">
                     <div class="card-icon"><i class="fas fa-chart-line"></i></div>
@@ -86,7 +86,7 @@
                 </div>
             </a>
 
-            <a href="it-consulting.html" class="expertise-card-link"
+            <a href="services/it-consulting" class="expertise-card-link"
                 style="text-decoration: none; color: inherit; display: block;">
                 <div class="expertise-card">
                     <div class="card-icon"><i class="fas fa-users-cog"></i></div>
@@ -101,7 +101,7 @@
                 </div>
             </a>
 
-            <a href="professional-training.html" class="expertise-card-link"
+            <a href="services/professional-training" class="expertise-card-link"
                 style="text-decoration: none; color: inherit; display: block;">
                 <div class="expertise-card">
                     <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
@@ -116,7 +116,7 @@
                 </div>
             </a>
 
-            <a href="cloud-solutions.html" class="expertise-card-link"
+            <a href="services/cloud-solutions" class="expertise-card-link"
                 style="text-decoration: none; color: inherit; display: block;">
                 <div class="expertise-card">
                     <div class="card-icon"><i class="fas fa-cloud-upload-alt"></i></div>
@@ -126,7 +126,7 @@
                 </div>
             </a>
 
-            <a href="ai-automation.html" class="expertise-card-link"
+            <a href="services/ai-automation" class="expertise-card-link"
                 style="text-decoration: none; color: inherit; display: block;">
                 <div class="expertise-card">
                     <div class="card-icon"><i class="fas fa-robot"></i></div>
@@ -142,7 +142,7 @@
     <div class="container">
         <h2>Need a Custom Solution?</h2>
         <p>Contact us today to discuss your project requirements with our experts.</p>
-        <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Get a Free Quote</a>
+        <a href="contact" class="btn btn-primary" style="margin-top: 2rem;">Get a Free Quote</a>
     </div>
 </section>
 
@@ -162,18 +162,18 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">Cloud Solutions</a></li>
-                    <li><a href="services.html">Digital Marketing</a></li>
-                    <li><a href="services.html">IT Consulting</a></li>
+                    <li><a href="services">Web Development</a></li>
+                    <li><a href="services">Cloud Solutions</a></li>
+                    <li><a href="services">Digital Marketing</a></li>
+                    <li><a href="services">IT Consulting</a></li>
                 </ul>
             </div>
             <div class="footer-section">

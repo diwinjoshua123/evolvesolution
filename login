@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - Evolve Solution</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="static/images/logo.png" alt="Evolve Solution Logo"
+                        class="logo-img">
+                    <div class="logo-text">
+                        <span class="text-evolve">Evolve</span><span class="text-solution">Solution</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="services">Services</a></li>
+                
+                <li><a href="login" style="color: var(--primary-color); font-weight: 600;">Login</a>
+                </li>
+                
+                <li><a href="contact" class="btn-nav-cta">Get a Quote</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+<section class="login-section"
+    style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+    <div class="auth-container"
+        style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 450px;">
+
+        <!-- Toggle Buttons -->
+        <div class="auth-toggle" style="display: flex; margin-bottom: 2rem; border-bottom: 2px solid #f1f5f9;">
+            <button id="loginBtn" class="active" onclick="showLogin()"
+                style="flex: 1; padding: 1rem; border: none; background: none; font-weight: 600; color: var(--primary-color); border-bottom: 2px solid var(--primary-color); cursor: pointer;">Login</button>
+            <button id="registerBtn" onclick="showRegister()"
+                style="flex: 1; padding: 1rem; border: none; background: none; font-weight: 600; color: #94a3b8; cursor: pointer;">Sign
+                Up</button>
+        </div>
+
+        
+        
+        
+
+        <!-- Login Form -->
+        <form id="loginForm" method="POST" action="login">
+            <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Welcome Back</h2>
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem; color: #64748b; font-size: 0.9rem;">Email
+                    Address</label>
+                <input type="email" name="email" required
+                    style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; transition: border-color 0.3s;">
+            </div>
+            <div class="form-group" style="margin-bottom: 2rem;">
+                <label
+                    style="display: block; margin-bottom: 0.5rem; color: #64748b; font-size: 0.9rem;">Password</label>
+                <input type="password" name="password" required
+                    style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; transition: border-color 0.3s;">
+            </div>
+            <button type="submit" class="btn btn-primary"
+                style="width: 100%; padding: 1rem; border-radius: 8px;">Login</button>
+        </form>
+
+        <!-- Register Form (Hidden by default) -->
+        <form id="registerForm" method="POST" action="register" style="display: none;">
+            <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Create Account</h2>
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label
+                    style="display: block; margin-bottom: 0.5rem; color: #64748b; font-size: 0.9rem;">Username</label>
+                <input type="text" name="username" required
+                    style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; transition: border-color 0.3s;">
+            </div>
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem; color: #64748b; font-size: 0.9rem;">Email
+                    Address</label>
+                <input type="email" name="email" required
+                    style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; transition: border-color 0.3s;">
+            </div>
+            <div class="form-group" style="margin-bottom: 2rem;">
+                <label
+                    style="display: block; margin-bottom: 0.5rem; color: #64748b; font-size: 0.9rem;">Password</label>
+                <input type="password" name="password" required
+                    style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; transition: border-color 0.3s;">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; border-radius: 8px;">Sign
+                Up</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    function showLogin() {
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('registerForm').style.display = 'none';
+
+        document.getElementById('loginBtn').classList.add('active');
+        document.getElementById('registerBtn').classList.remove('active');
+
+        document.getElementById('loginBtn').style.color = 'var(--primary-color)';
+        document.getElementById('loginBtn').style.borderBottom = '2px solid var(--primary-color)';
+
+        document.getElementById('registerBtn').style.color = '#94a3b8';
+        document.getElementById('registerBtn').style.borderBottom = 'none';
+    }
+
+    function showRegister() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('registerForm').style.display = 'block';
+
+        document.getElementById('registerBtn').classList.add('active');
+        document.getElementById('loginBtn').classList.remove('active');
+
+        document.getElementById('registerBtn').style.color = 'var(--primary-color)';
+        document.getElementById('registerBtn').style.borderBottom = '2px solid var(--primary-color)';
+
+        document.getElementById('loginBtn').style.color = '#94a3b8';
+        document.getElementById('loginBtn').style.borderBottom = 'none';
+    }
+</script>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Evolve Solution</h3>
+                <p>Empowering businesses through digital innovation. We engineer scalable digital platforms and
+                    high-performance applications.</p>
+                <div class="social-links">
+                    <!-- Add social icons here if needed -->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services">Web Development</a></li>
+                    <li><a href="services">Cloud Solutions</a></li>
+                    <li><a href="services">Digital Marketing</a></li>
+                    <li><a href="services">IT Consulting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-envelope margin-right-sm"></i> evolvesolutionspvtltd@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt margin-right-sm"></i> NP 28, Sai Supreme, Thiru Vi Ka Industrial
+                    Estate, Chennai – 600006</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Evolve Solution. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
